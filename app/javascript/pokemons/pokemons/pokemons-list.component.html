@@ -1,0 +1,12 @@
+<div class="row">
+
+  <div *ngFor="let pokemon of pokemons" class="col-sm-2">
+    <div class="card mb-5 text-center" (click)="show(pokemon)">
+      <img class="card-img-top" [src]="pokemon.image_url" [alt]="pokemon.name" *ngIf="pokemon.image_url">
+      <div class="card-block">
+        <h4 class="card-title">{{pokemon.name}}</h4>
+      </div>
+    </div>
+  </div>
+
+</div>
